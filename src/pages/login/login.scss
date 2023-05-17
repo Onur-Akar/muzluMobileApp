@@ -1,0 +1,22 @@
+page-login {
+    ion-input {
+        border-top: none;
+        :first-child {
+          border-bottom: 1px solid #c4c6d2;
+        }
+      }
+      .list-ios > .item-block:first-child, .list-ios > .item-block:last-child {
+        border-top: none;
+        border-bottom: none;
+      }
+      .text-input {
+        padding-bottom: 10px;
+        font-size: 13px;
+      }
+      .button-ios {
+        border-radius: 70px;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: white;
+      }
+}

@@ -1,0 +1,155 @@
+<!--
+  Generated template for the UserProfileOptModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar hideBackButton>
+    <ion-buttons end>
+      <button ion-button (click)="dismiss()" color="white">İptal</button>
+    </ion-buttons>
+    <ion-title>Profil Ayarları</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+  <ion-grid no-padding style="padding-bottom: 50px">
+    <ion-row style="position:relative;border-bottom: 1px solid #eee">
+      <ion-col style="height: 250px;position:relative;">
+        <ion-img class="full-img profile-back" width="100%" height="100%" src="https://preview.ibb.co/bUdGwd/foto2.jpg">
+          <!--<ion-img class="full-img" width="100%" height="100%" src="https://image.ibb.co/mZO9NT/fotot5.jpg">-->
+
+        </ion-img>
+        <ion-col col-12 style="height: 100%; position:absolute;bottom:0;right: 0;text-align: left;background: #00000033;">
+        </ion-col>
+        <ion-col class="change-back-box" style=" background-color: #0000005e;">
+          <span style="vertical-align: middle;">Kapak Fotoğrafını güncelle</span>
+          <span class="profile-icon change-back-icon" style="vertical-align: middle;"></span>
+        </ion-col>
+        <ion-col col-8 style="position:absolute;bottom:0;right: 0;text-align: left;padding: 5px;color: #fff;">
+          <span style="font-size: 18px;font-weight: 700">
+            Love Story
+          </span>
+          <br>
+          <span style="font-size: 12px;font-weight: 600">
+            @eyvallah
+          </span>
+        </ion-col>
+        <ion-col col-4 class="profile-img-box">
+          <ion-col no-padding style="height: 100%;">
+            <ion-img class="full-img" width="100%" height="100%" src="https://preview.ibb.co/cxkMCJ/foto3.jpg">
+            </ion-img>
+            <ion-col col-12 class="profile-img-change" style="background-color: #0000005e;">
+              <span class="profile-icon change-back-icon" style="vertical-align: middle;"></span>
+            </ion-col>
+          </ion-col>
+        </ion-col>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row class="main-box" style="margin-top: 50px;">
+      <ion-col col-12 class="title-box">
+        Profil Ayarları
+        <ion-icon (click)="openProfileSetModal()" style="float: right" ios="ios-create" md="md-create"></ion-icon>
+      </ion-col>
+      <ion-col col-12 class="content-box" style="border-bottom: 1px solid #eee">
+        <span class="profile-icon desc-icon" style="vertical-align: middle;"></span>
+        <span style="vertical-align: middle;">thats about me broo </span>
+      </ion-col>
+      <ion-col col-12 class="content-box">
+        <span class="profile-icon location-icon" style="vertical-align: middle;"></span>
+        <span style="vertical-align: middle;">
+          <span style="opacity: .5;padding-right: 5px;"> Yaşadığın şehir:</span>Istanbul</span>
+      </ion-col>
+      <ion-col col-12 class="content-box">
+        <span class="profile-icon birth-icon" style="vertical-align: middle;"></span>
+        <span style="vertical-align: middle;">
+          <span style="opacity: .5;padding-right: 5px;"> Doğum Tarihi:</span>01.01.1985</span>
+      </ion-col>
+      <ion-col col-12 class="content-box">
+        <span class="profile-icon relation-icon" style="vertical-align: middle;"></span>
+        <span style="vertical-align: middle;">
+          <span style="opacity: .5;padding-right: 5px;"> İlişki Durumu:</span>Yok</span>
+      </ion-col>
+      <ion-col col-12 class="content-box">
+        <span class="profile-icon sex-icon" style="vertical-align: middle;"></span>
+        <span style="vertical-align: middle;">
+          <span style="opacity: .5;padding-right: 5px;"> Cinsyiet:</span>Erkek</span>
+      </ion-col>
+      <ion-col col-12 class="content-box">
+        <span class="profile-icon work-icon" style="vertical-align: middle;"></span>
+        <span style="vertical-align: middle;">
+          <span style="opacity: .5;padding-right: 5px;"> İş:</span>ıste</span>
+      </ion-col>
+      <ion-col col-12 class="content-box">
+        <span class="profile-icon school-icon" style="vertical-align: middle;"></span>
+        <span style="vertical-align: middle;">
+          <span style="opacity: .5;padding-right: 5px;"> Eğitim:</span>boyle</span>
+      </ion-col>
+
+    </ion-row>
+
+
+    <ion-row class="main-box">
+      <ion-col col-12 class="title-box">
+        Genel Ayarlar
+        <ion-icon (click)="openGeneralSetModal()" style="float: right" ios="ios-create" md="md-create"></ion-icon>
+      </ion-col>
+      <ion-col col-12 class="content-box">
+        <span>
+          <span style="opacity: .5;padding-right: 5px;"> Ad:</span>Hazal</span>
+      </ion-col>
+      <ion-col col-12 class="content-box">
+        <span>
+          <span style="opacity: .5;padding-right: 5px;"> Soyad:</span>Barut</span>
+      </ion-col>
+      <ion-col col-12 class="content-box">
+        <span>
+          <span style="opacity: .5;padding-right: 5px;"> Eposta:</span>hazal@muzlu.com</span>
+      </ion-col>
+      <ion-col col-12 class="content-box">
+        <span>
+          <span style="opacity: .5;padding-right: 5px;"> Dil:</span>Turkish</span>
+      </ion-col>
+      <ion-col col-12 class="content-box">
+        <span>
+          <span style="opacity: .5;padding-right: 5px;"> Hesap Gizliği:</span>yok</span>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="main-box">
+      <ion-col col-12 class="title-box">
+        Şifre Ayarları
+      </ion-col>
+      <form action="">
+        <ion-col col-12 class="content-box">
+          <ion-item class="setting-input-box">
+            <ion-label style="opacity: .5;">Mevcut Şifre:</ion-label>
+            <ion-input type="password" placeholder="*******"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-12 class="content-box">
+          <ion-item class="setting-input-box">
+            <ion-label style="opacity: .5;">Yeni Şifre:</ion-label>
+            <ion-input type="password" placeholder="*******"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-12 class="content-box">
+          <ion-item class="setting-input-box" no-border="">
+            <ion-label style="opacity: .5;">Yeni Şifre tekrar:</ion-label>
+            <ion-input type="password" placeholder="*******"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-12 class="content-box">
+          <button ion-button type="submit" block>Gönder</button>
+        </ion-col>
+      </form>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

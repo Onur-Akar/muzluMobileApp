@@ -1,0 +1,80 @@
+<!--
+  Generated template for the EventPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-2>
+          <button ion-button icon-only>
+            <ion-icon name="notifications"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-6>
+          <ion-title>Görevler</ion-title>
+        </ion-col>
+        <ion-col col-4>
+          <span class="white">{{userMuz}} muz</span>
+          <img class="img-responsive header-photo" src="https://cdn.muzlu.com/{{userPhoto}}">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+
+
+  <!--<ion-navbar>-->
+  <!--<ion-buttons start>-->
+  <!--<button ion-button icon-only>-->
+  <!--<ion-icon name="notifications"></ion-icon>-->
+  <!--</button>-->
+  <!--</ion-buttons>-->
+  <!--<ion-title>-->
+  <!--<ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>-->
+  <!--</ion-title>-->
+  <!--<ion-buttons end>-->
+  <!--<ion-col col-6>-->
+  <!--<p class="white">{{userMuz}} muz</p>-->
+  <!--<img class="img-responsive" src="https://cdn.muzlu.com/{{userPhoto}}"></ion-col>-->
+
+
+  <!--</ion-buttons>-->
+  <!--</ion-navbar>-->
+</ion-header>
+
+
+<ion-content class="task">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 *ngFor="let task of tasks">
+        <ion-card style="position: relative;">
+          <img class="img-responsive" src="https://cdn.muzlu.com/{{task.cover_photo}}">
+          <ion-card-content padding>
+            <div class="card-title">{{task.title}}</div>
+            <div class="win">+{{task.earned_muz}} MUZ KAZAN!</div>
+            <div class="date">
+              Bitiş tarihi: {{task.finished_date}}
+            </div>
+
+          </ion-card-content>
+          <button class="magic-btn" (click)="showDetail()">Detay Gör</button>
+        </ion-card>
+
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <!---->
+  <!--<ion-card *ngFor="let task of tasks">-->
+
+
+  <!--<ion-card-content>-->
+  <!--{{task.title}}-->
+  <!--</ion-card-content>-->
+
+  <!--</ion-card>-->
+</ion-content>

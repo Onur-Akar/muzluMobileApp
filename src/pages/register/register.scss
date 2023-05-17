@@ -1,0 +1,28 @@
+page-register {
+    .content-ios, .item-ios {
+        background-color: #fff;
+      }
+      .button-ios {
+        border-radius: 70px;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: white;
+      }
+      ion-input {
+        border-top: none;
+        :first-child {
+          border-bottom: 1px solid #c4c6d2;
+        }
+      }
+      .list-ios > .item-block:first-child, .list-ios > .item-block:last-child {
+        border-top: none;
+        border-bottom: none;
+      }
+      .text-input {
+        padding-bottom: 5px;
+        font-size: 13px;
+      }
+      .checkbox-ios .checkbox-icon {
+        border-radius: 5px;
+      }
+}

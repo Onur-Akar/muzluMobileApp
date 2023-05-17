@@ -1,0 +1,153 @@
+page-post-modal {
+    img{
+
+        -webkit-border-radius: 5px !important;
+        -moz-border-radius: 5px !important;
+        border-radius: 5px !important;
+      }
+      ion-content{
+    
+        background: white !important;
+      }
+    
+      .add-icon{
+    
+        border: 4px dashed #cccede;
+        color: #999ebe;
+        padding: 0;
+        height: 75px;
+        width: 100%;
+        font-weight: bolder;
+        line-height: 75px;
+        text-align: center;
+        font-size: 60px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+      }
+    
+      .add-photo-survey{
+    
+    
+        @extend .add-icon;
+        font-weight: normal;
+      }
+    
+      ion-card{
+    
+        box-shadow: none !important;
+      }
+    
+    
+      .post-share-button{
+    
+        color:white;
+        border-radius: 25px;
+    
+      }
+    
+    
+      .full-height{
+    
+        height: 100%;
+      }
+    
+      .gray-border{
+    
+        border:2px solid #c4c6d2;
+      }
+    
+      .center-parent{
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+      }
+    
+    
+      .video-post-share-textarea-link{
+    
+        border-radius: 50px;
+        height:50px;
+        line-height: 25px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        background: #f4f4f4;
+      }
+    
+    
+       .searchbar-search-icon{
+    
+        position: relative;
+    
+        top:1rem !important;
+      }
+    
+      .searchbar-ios{
+    
+        background:none;
+      }
+    
+      .absolute-left{
+    
+        position: absolute;
+        left: 0;
+      }
+    
+      .text-ellipsis-location-tag{
+    
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    
+      .ion-input-first{
+    
+        border:1px solid #999ebe;
+        color:#999ebe;
+        height: 40px;
+    
+        &:first-child:after{
+    
+          content: "TL";
+          height: 40px;
+          line-height: 40px;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 40px;
+          color:#fff;
+          background: #999ebe;
+    
+        }
+    
+    
+      }
+    
+      .ion-input-class{
+    
+        border:1px solid #999ebe;
+        color:#999ebe;
+        height: 40px;
+      }
+    
+      .parent-flex{
+    
+        display: flex;
+        img {
+    
+          height: 10vh;
+          object-fit: cover;
+        }
+      }
+    
+      ion-avatar{
+    
+        .profile-img{
+    
+          height: 10vh;
+          object-fit: cover;
+        }
+      }
+}

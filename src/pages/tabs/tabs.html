@@ -1,0 +1,14 @@
+<!--
+  Generated template for the TabsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-tabs>
+  <ion-tab (ionSelect)="tabsActive=1" [root]="tab1Root" tabTitle="Timeline" tabIcon="{{tabsActive==1 ? 'anasayfa-active':'anasayfa'}}"></ion-tab>
+  <ion-tab (ionSelect)="tabsActive=2" [root]="tab4Root" tabTitle="MUZMODO" tabIcon="{{tabsActive==2 ? 'muzmodo-active':'muzmodo'}}"></ion-tab>
+  <ion-tab (ionSelect)="tabsActive=3" [root]="tab2Root" tabTitle="Etkinlikler" tabIcon="{{tabsActive==3 ? 'etkinlikler-active':'etkinlikler'}}"></ion-tab>
+  <ion-tab (ionSelect)="tabsActive=4" [root]="tab3Root" tabTitle="Görevler" tabIcon="{{tabsActive==4 ? 'active-gorevler':'gorevler'}}"></ion-tab>
+  <ion-tab (ionSelect)="tabsActive=5" [root]="tab4Root" tabTitle="Sayfalar" tabIcon="{{tabsActive==5 ? 'active-sayfalar':'sayfalar'}}"></ion-tab>
+  <ion-tab (ionSelect)="tabsActive=6" [root]="tab5Root" tabTitle="Dükkan" tabIcon="{{tabsActive==6 ? 'active-dukkan':'dukkan'}}"></ion-tab>
+</ion-tabs>

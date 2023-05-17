@@ -1,0 +1,39 @@
+.ios, .md {
+
+    page-intro {
+      p {
+        font-size: 14px;
+        line-height: 29px;
+        padding: 0 30px;
+      }
+      ion-slide {
+        background-color: #f4f4f4;
+      }
+      .fixed {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        border-top: 1px solid #c4c6d2;
+        padding: 15px;
+        ion-col:first-child {
+          border-right: 1px solid #c4c6d2;
+        }
+        a {
+          color: #4c4f61;
+          text-decoration: none;
+        }
+      }
+      .swiper-pagination {
+        bottom: 150px;
+      }
+      .swiper-pagination-bullet-active {
+        background: #ffcc30;
+      }
+    }
+  
+  }
+  
+  .ios page-intro .swiper-pagination, .md page-intro .swiper-pagination {
+    bottom: 100px;
+  }
+  

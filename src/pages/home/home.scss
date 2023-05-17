@@ -1,0 +1,285 @@
+page-home {
+    .card-header-ios + .card-content-ios, .card-ios .item + .card-content-ios {
+        color: #000000;
+    
+      }
+    }
+    
+    $textcolor: #888888;
+    $yellow-color: #ffc947;
+    $siteyelow: #ffc947;
+    
+    
+    * {
+    
+      font-family:'Open Sans', sans-serif;
+    
+    
+    }
+    
+    .home-notification {
+    
+      background: white;
+      border-radius: 100%;
+      color: #999ebe;
+      font-size: 10px;
+      padding: 2px;
+      width: 15px;
+      position: relative;
+      margin-left: -10px;
+      margin-top: -15px;
+    }
+    
+    .icon-arrow-home-page {
+    
+      height: 35px;
+      width: 15px;
+      overflow: hidden;
+      position: relative;
+      background: none;
+    
+    
+    }
+    
+    .divider {
+    
+      border-bottom: 1px solid #dddddd;
+    }
+    
+    .selectbox {
+      border-radius: 5px;
+      color:#a1a1a1;
+      height: 40px;
+      padding: 5px 10px;
+      margin: 0;
+      font-size: 14px;
+    
+    }
+    
+    .img-near-whatis-your-mind {
+    
+      margin-left: 15px;
+      height: 37px;
+      width: 40px;
+      border-radius: 10%;
+    }
+    
+    .gap-1em {
+    
+     /* margin-bottom: 1em;*/
+      margin-bottom: 5px;
+    
+    }
+    
+    .bg-gray {
+    
+      color:#eae9e8;
+    
+      background: #eae9e8;
+    }
+    
+    .bg-yellow {
+    
+      background: #ffcc30;
+    }
+    
+    .bg-white {
+    
+    
+      height: 30px;
+    
+      background: #ffffff;
+    }
+    
+    .bold-text {
+    
+      font-weight: bold;
+    }
+    
+    ion-item {
+    
+      background: #e5e5e5;
+    }
+    
+    .header-icons {
+    
+      height: 25px;
+    }
+    
+    .col {
+    
+    
+      text-align: center;
+    
+    }
+    
+    .tabs-ben-muzlu-halk {
+      margin: 0;
+      padding: 0;
+    
+    
+    
+      .col {
+        height: 40px;
+    
+      }
+    
+      *{
+    
+        color:#999ebe;
+      }
+    
+    }
+    
+    .like-share-comment-text-color{
+    
+    
+      color:#999ebe;
+    }
+    
+    .progressbar-background {
+    
+      background:#e5ecf6;
+    
+      border-radius: 10%;
+      width: 100%;
+      height: 1vh;
+    
+      .progressbar-foreground {
+        width: 82%;
+        height: 1vh;
+        background: $siteyelow;
+      }
+    }
+    
+    h3 {
+      color: #9E9E9E;
+    }
+    
+    .post-box .item-inner {
+      padding-right: 0 !important;
+    }
+    
+    .post-span {
+     /* position: relative;
+      top: -8px !important;
+      font-size: 12px;
+      font-weight: 600;
+      left: -3px;
+      color:#999ebe;*/
+    }
+    
+    @media (max-width: 414px) {
+      .post-box {
+        width: fit-content;
+        max-width: fit-content;
+        padding: 0;
+      }
+    }
+    
+    @media (max-width: 320px) {
+      .post-span {
+        display: none;
+      }
+      .post-box {
+        width: initial;
+        max-width: initial;
+        padding: 0 15px;
+      }
+    
+    }
+    
+    
+    h6{
+    
+      color: #999ebe;
+    }
+    
+    ion-slides{
+    
+      .col{
+    
+        color: #999ebe;
+      }
+    }
+    /*
+    
+    iamges rules
+     */
+    
+    img{
+    
+      max-height: 65vh;
+    }
+    /**
+    
+    images rules
+     */
+    
+    .home-searchbar-inputtext
+    {
+    
+      color:#d0d1db;
+    
+      &::-moz-placeholder {
+        color: white;
+      }
+    
+      &:-ms-input-placeholder {
+        color: white;
+      }
+    
+      &::-webkit-input-placeholder {
+        text-indent: 0;
+        color: white;
+      }
+    }
+    
+    .searchbar-input::placeholder{
+    
+      color:red;
+    }
+    
+    #homeIonSlides{
+    
+      button{
+    
+        color:white;
+      }
+    }
+    
+    .text-ellipsis{
+      text-overflow: ellipsis;
+    
+    }
+    
+    
+    img{
+    
+      border-radius: 5px;
+    }
+    
+    .none-backgrrounColor{
+    
+      background-color: transparent;
+    }
+    
+    .img-responsive{
+    
+      width: 100%;
+    
+    }
+    
+    .yellow-color-text{
+    
+      color:#ffc947;
+    }
+    
+    
+    .custom-icon-placement
+    {
+      position: relative;
+      top: 2px;
+      left: -11px;
+      vertical-align: 0px;
+    }

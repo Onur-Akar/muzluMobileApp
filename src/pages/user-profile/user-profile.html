@@ -1,0 +1,223 @@
+<!--
+  Generated template for the UserProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar hideBackButton>
+    <ion-buttons start>
+      <button ion-button (click)="back()" color="white">Geri</button>
+    </ion-buttons>
+    <ion-title>Profil</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+  <ion-grid no-padding style="padding-bottom: 50px">
+    <ion-row style="position:relative;border-bottom: 1px solid #eee">
+      <ion-col style="height: 250px;position:relative;">
+        <ion-img class="full-img profile-back" width="100%" height="100%" src="https://preview.ibb.co/bUdGwd/foto2.jpg">
+          <!--<ion-img class="full-img" width="100%" height="100%" src="https://image.ibb.co/mZO9NT/fotot5.jpg">-->
+
+        </ion-img>
+        <ion-col col-12 style="height: 100%; position:absolute;bottom:0;right: 0;text-align: left;background: #00000033;">
+        </ion-col>
+        <ion-col class="change-back-box" style=" background-color: #0000005e;">
+          <span style="vertical-align: middle;">Kapak Fotoğrafını güncelle</span>
+          <span class="profile-icon change-back-icon" style="vertical-align: middle;"></span>
+        </ion-col>
+        <ion-col col-8 style="position:absolute;bottom:0;right: 0;text-align: left;padding: 5px;color: #fff;">
+          <span style="font-size: 18px;font-weight: 700">
+            Love Story
+          </span>
+          <br>
+          <span style="font-size: 12px;font-weight: 600">
+            @eyvallah
+          </span>
+        </ion-col>
+        <ion-col col-4 class="profile-img-box">
+          <ion-col no-padding style="height: 100%">
+            <ion-img class="full-img" width="100%" height="100%" src="https://preview.ibb.co/cxkMCJ/foto3.jpg">
+            </ion-img>
+            <ion-col col-12 class="profile-img-change" style="background-color: #0000005e;">
+              <span class="profile-icon change-back-icon" style="vertical-align: middle;"></span>
+            </ion-col>
+          </ion-col>
+        </ion-col>
+      </ion-col>
+
+      <ion-col col-12 padding style="background: #fff;padding: 10px;border-bottom: 1px solid #eee">
+        <ion-row>
+          <ion-col col-4 style="color: transparent">
+            empty
+          </ion-col>
+          <ion-col col-4 style="padding: 0px 5px 0px 0px;">
+            <ion-col col-12 style="background: #eee;border-radius: 5px;display: inline-block;padding: 10px 6px;">
+              <span class="notif-message">3</span>
+              <span class="profile-icon message-icon" style="vertical-align: middle;"></span>
+              <span style="vertical-align: middle;">Mesaj</span>
+
+            </ion-col>
+          </ion-col>
+
+          <!-- takip et -->
+
+          <!--<ion-col col-4 style="padding: 0px 5px;">-->
+          <!--<ion-col col-12-->
+          <!--style="background: #eee;border-radius: 5px;display: inline-block;padding: 10px 6px;">-->
+          <!--<span class="profile-icon follow-icon" style="vertical-align: middle;"></span>-->
+          <!--<span style="vertical-align: middle;">Takip Et</span>-->
+          <!--</ion-col>-->
+          <!--</ion-col>-->
+
+          <!-- takipi birak -->
+
+          <ion-col col-4 style="padding: 0px;padding-left: 5px">
+            <ion-col col-12 style="color:#ffffff;background: #ffcc30;border-radius: 5px;display: inline-block;padding: 10px 4px;font-size: 11px;font-weight: 500">
+              <span class="profile-icon leave-icon" style="vertical-align: middle;"></span>
+              <span style="vertical-align: middle;">Takipi Bırak</span>
+            </ion-col>
+          </ion-col>
+        </ion-row>
+        <ion-row style="margin-top: 20px;margin-bottom: 10px;">
+          <ion-col col-4 text-center style="font-weight: 700;border-right: 1px solid #eee;">
+            108
+            <br>
+            <span style="opacity: .5;font-weight: 500;"> paylaşım </span>
+          </ion-col>
+          <ion-col col-4 text-center style="font-weight: 700;border-right: 1px solid #eee;">
+            73
+            <br>
+            <span style="opacity: .5;font-weight: 500;">
+              Takip
+              <button class="magic-btn" ion-button clear (click)="openFollowInfoModal('follows')"></button>
+            </span>
+          </ion-col>
+          <ion-col col-4 text-center style="font-weight: 700;">
+            52
+            <br>
+            <span style="opacity: .5;font-weight: 500;">
+              Takşpçi
+              <button class="magic-btn" ion-button clear (click)="openFollowInfoModal('followers')"></button>
+            </span>
+          </ion-col>
+        </ion-row>
+
+
+      </ion-col>
+
+    </ion-row>
+    <ion-row class="main-box">
+      <ion-col col-12 class="title-box">
+        Hakkımda
+      </ion-col>
+      <ion-col col-12 class="content-box" style="border-bottom: 1px solid #eee">
+        <span class="profile-icon desc-icon" style="vertical-align: middle;"></span>
+        <span style="vertical-align: middle;">thats about me broo </span>
+      </ion-col>
+      <ion-col col-12 class="content-box">
+        <span class="profile-icon location-icon" style="vertical-align: middle;"></span>
+        <span style="vertical-align: middle;">
+          <span style="opacity: .5;padding-right: 5px;"> Yaşadığın şehir:</span>Istanbul</span>
+      </ion-col>
+      <ion-col col-12 class="content-box">
+        <span class="profile-icon birth-icon" style="vertical-align: middle;"></span>
+        <span style="vertical-align: middle;">
+          <span style="opacity: .5;padding-right: 5px;"> Doğum Tarihi:</span>01.01.1985</span>
+      </ion-col>
+      <ion-col col-12 class="content-box">
+        <span class="profile-icon relation-icon" style="vertical-align: middle;"></span>
+        <span style="vertical-align: middle;">
+          <span style="opacity: .5;padding-right: 5px;"> İlişki Durumu:</span>Yok</span>
+      </ion-col>
+      <ion-col col-12 class="content-box">
+        <span class="profile-icon sex-icon" style="vertical-align: middle;"></span>
+        <span style="vertical-align: middle;">
+          <span style="opacity: .5;padding-right: 5px;"> Cinsyiet:</span>Erkek</span>
+      </ion-col>
+      <ion-col col-12 class="content-box">
+        <span class="profile-icon work-icon" style="vertical-align: middle;"></span>
+        <span style="vertical-align: middle;">
+          <span style="opacity: .5;padding-right: 5px;"> İş:</span>ıste</span>
+      </ion-col>
+      <ion-col col-12 class="content-box">
+        <span class="profile-icon school-icon" style="vertical-align: middle;"></span>
+        <span style="vertical-align: middle;">
+          <span style="opacity: .5;padding-right: 5px;"> Eğitim:</span>boyle</span>
+      </ion-col>
+
+    </ion-row>
+    <ion-row class="main-box">
+      <ion-col class="title-box">Katıldığım Etkinlikler/Görevler</ion-col>
+      <ion-slides no-padding="">
+        <ion-slide col-3>
+          <ion-col class="slide-box">
+            <ion-img class="full-img" width="100%" height="100%" src="https://preview.ibb.co/cxkMCJ/foto3.jpg"></ion-img>
+
+          </ion-col>
+
+        </ion-slide>
+        <ion-slide col-3>
+          <ion-col class="slide-box">
+            <ion-img class="full-img" width="100%" height="100%" src="https://preview.ibb.co/cxkMCJ/foto3.jpg"></ion-img>
+
+          </ion-col>
+
+        </ion-slide>
+        <ion-slide col-3>
+          <ion-col class="slide-box">
+            <ion-img class="full-img" width="100%" height="100%" src="https://preview.ibb.co/cxkMCJ/foto3.jpg"></ion-img>
+
+          </ion-col>
+
+        </ion-slide>
+        <ion-slide col-3>
+          <ion-col class="slide-box">
+            <ion-img class="full-img" width="100%" height="100%" src="https://preview.ibb.co/cxkMCJ/foto3.jpg"></ion-img>
+
+          </ion-col>
+
+        </ion-slide>
+        <ion-slide col-3>
+          <ion-col class="slide-box">
+            <ion-img class="full-img" width="100%" height="100%" src="https://preview.ibb.co/cxkMCJ/foto3.jpg"></ion-img>
+
+          </ion-col>
+
+        </ion-slide>
+        <ion-slide col-3>
+          <ion-col class="slide-box">
+            <ion-img class="full-img" width="100%" height="100%" src="https://preview.ibb.co/cxkMCJ/foto3.jpg"></ion-img>
+
+          </ion-col>
+
+        </ion-slide>
+        <ion-slide col-3>
+          <ion-col class="slide-box">
+            <ion-img class="full-img" width="100%" height="100%" src="https://preview.ibb.co/cxkMCJ/foto3.jpg"></ion-img>
+
+          </ion-col>
+
+        </ion-slide>
+        <ion-slide col-3>
+          <ion-col class="slide-box">
+            <ion-img class="full-img" width="100%" height="100%" src="https://preview.ibb.co/cxkMCJ/foto3.jpg"></ion-img>
+
+          </ion-col>
+
+        </ion-slide>
+        <ion-slide col-3>
+          <ion-col class="slide-box">
+            <ion-img class="full-img" width="100%" height="100%" src="https://preview.ibb.co/cxkMCJ/foto3.jpg"></ion-img>
+
+          </ion-col>
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

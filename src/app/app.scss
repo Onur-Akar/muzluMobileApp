@@ -1,0 +1,886 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+
+/***********************-app.css-*************************/
+.content {
+    height: 100vh;
+    background: #f4f4f4; }
+  
+  .toolbar-background-ios {
+    background: #ffcc30; }
+  
+  .white {
+    color: white; }
+  
+  .toolbar-title-ios, .content-ios {
+    color: white; }
+  
+  header .grid {
+    padding: 0; }
+  
+  .header-ios .toolbar-background-ios, .footer-ios .toolbar-background-ios {
+    border-style: none;
+    border-color: none; }
+  
+  .toolbar .searchbar-ios .searchbar-input {
+    background: white;
+    border-radius: 15px;
+    margin-top: 7px; }
+  
+  .searchbar-ios .searchbar-search-icon {
+    top: 16px; }
+  
+  .ion-ios-notifications, ion-icon {
+    /*color: rgba(157, 104, 15, 0.48);*/
+    font-size: 29px; }
+    .ion-ios-notifications .bell-notification, ion-icon .bell-notification {
+      background: #caa32d !important;
+      color: #caa32d !important; }
+  
+  .relative {
+    position: relative;
+    display: flex;
+    margin: 1em; }
+  
+  .border {
+    height: 1px; }
+  
+  .share-options ion-col {
+    margin-top: 5px;
+    border-right: 1px solid #e4e4e4;
+    background: #f6f7f9;
+    border-radius: 22px;
+    /*color: color($colors, dark-purple);*/ }
+    .share-options ion-col ion-icon {
+      color: #999ebe; }
+    .share-options ion-col span {
+      position: relative;
+      top: -5px;
+      color: #999ebe; }
+  
+  .card-ios + ion-card, .card-ios {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%; }
+  
+  .card-ios {
+    background-color: #ffffff;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2); }
+  
+  ion-navbar.toolbar {
+    height: 3vh; }
+  
+  .header-photo {
+    /* width: 33px;
+     height: 33px;
+     border-radius: 10%;
+     border: 1px solid #ffffff;
+     float: right;
+     margin: 5px;
+     margin-top: -44px;
+     margin-right: 5px;*/
+    height: 40px;
+    width: 40px !important;
+    object-fit: cover;
+    padding: 3px;
+    border-radius: 5px; }
+  
+  .muzcount {
+    line-height: 50px;
+    margin-left: 10px; }
+  
+  .gray-background, .gray-background .item-ios {
+    background-color: #eae9e8; }
+  
+  .item-ios.item-block .item-inner {
+    border-bottom: none; }
+  
+  .item-ios ion-avatar ion-img, .item-ios ion-avatar img {
+    border-radius: 5px;
+    overflow: hidden;
+    width: 42px;
+    height: 42px; }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold !important;
+    color: #4c4f61; }
+  
+  .item-ios p {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.23;
+    color: #999ebe; }
+  
+  /* Moods */
+  .happy-mode {
+    background-image: url("../assets/mood/happy.png");
+    width: 35px;
+    height: 35px; }
+  
+  .card-header-ios + .card-content-ios, .card-ios .item + .card-content-ios {
+    padding-top: 16px; }
+  
+  .post-action {
+    border-top: 1px solid #f1f1f1; }
+    .post-action button {
+      color: #999ebe;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 15px; }
+    .post-action ion-icon {
+      color: #999ebe;
+      margin: 0 0 0 5px; }
+    .post-action span {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 12px;
+      font-weight: bold;
+      vertical-align: 0px; }
+  
+  .task .card {
+    height: 250px; }
+  .task img {
+    max-height: 125px;
+    object-fit: cover; }
+  .task .card-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    line-height: 1.44;
+    text-align: left;
+    color: #4c4f61;
+    border-bottom: 1px solid #e4e4e4; }
+  .task .win {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    line-height: 2.18;
+    text-align: center;
+    color: #eeb612;
+    border-bottom: 1px solid #e4e4e4; }
+  .task .date {
+    color: #999ebe;
+    font-size: 10px; }
+  
+  /***/
+  ion-icon[class*="appname-"] {
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background: currentColor;
+    width: .5em;
+    height: .5em; }
+  ion-icon[class*="etkinlikler"] {
+    background: url(../assets/imgs/sonetkinlikler.svg); }
+  ion-icon[class*="sayfalar"] {
+    background: url(../assets/imgs/sonsayfalar.svg); }
+  ion-icon[class*="dukkan"] {
+    background: url(../assets/imgs/sondukkan.svg); }
+  ion-icon[class*="gorevler"] {
+    background: url(../assets/imgs/songorevler.svg); }
+  ion-icon[class*="anasayfa"] {
+    background: url(../assets/imgs/sontimeline.svg); }
+  ion-icon[class*="anasayfa-active"] {
+    background: url(../assets/imgs/sontimeline-active.svg); }
+  ion-icon[class*="muzmodo"] {
+    background: url(../assets/imgs/sonmuzmodo.svg); }
+  ion-icon[class*="muzmodo-active"] {
+    background: url(../assets/imgs/sonmuzmodo-active.svg); }
+  ion-icon[class*="etkinlikler-active"] {
+    background: url(../assets/imgs/sonetkinlikler-active.svg); }
+  ion-icon[class*="active-gorevler"] {
+    background: url(../assets/imgs/songorevler-active.svg); }
+  ion-icon[class*="active-sayfalar"] {
+    background: url(../assets/imgs/sonsayfalar-active.svg); }
+  ion-icon[class*="active-dukkan"] {
+    background: url(../assets/imgs/sondukkan-active.svg); }
+  ion-icon[class*="deneme"] {
+    background-size: 50% 50%;
+    background-size: cover;
+    float: right;
+    background: url(../assets/imgs/paylas.svg) no-repeat; }
+  
+  /*
+  
+  custom icons deneme
+   */
+  ion-icon[class*="custom-"] {
+    mask-size: contain;
+    mask-position: 50% 50%;
+    mask-repeat: no-repeat;
+    background: currentColor;
+    width: 1em;
+    height: 1em; }
+  ion-icon[class*="custom-share-photo"] {
+    background: url(../assets/imgs/foto-paylas.svg) no-repeat;
+    background-size: contain;
+    color: #ffffff;
+    opacity: .4; }
+  ion-icon[class*="custom-share-location"] {
+    background: url(../assets/imgs/konum-paylas.svg) no-repeat;
+    background-size: contain;
+    color: #ffffff;
+    opacity: .4; }
+  ion-icon[class*="custom-share-anket"] {
+    background: url(../assets/imgs/anket-paylas.svg) no-repeat;
+    background-size: contain;
+    color: #ffffff;
+    opacity: .4; }
+  ion-icon[class*="custom-share-product"] {
+    background: url(../assets/imgs/urun-paylas.svg) no-repeat;
+    background-size: contain;
+    color: #ffffff;
+    opacity: .4; }
+  ion-icon[class*="custom-share-video"] {
+    mask-image: url(../assets/imgs/video-paylas.svg);
+    -webkit-background-size: contain;
+    background-size: contain;
+    color: #999ebe;
+    opacity: .4; }
+  ion-icon[class*="custom-qrcode"] {
+    mask-image: url(../assets/qrcode.svg); }
+  ion-icon[class*="custom-spades"] {
+    mask-image: url(../assets/spades.svg); }
+  ion-icon[class*="custom-like"] {
+    mask-image: url("../assets/imgs/begen.svg");
+    mask-size: 75% auto; }
+  ion-icon[class*="custom-like-active"] {
+    mask-image: url("../assets/imgs/begen-active.svg");
+    mask-size: 75% auto;
+    background: #EE3840; }
+  ion-icon[class*="custom-share-comment"] {
+    mask-image: url("../assets/imgs/paylas.svg");
+    mask-size: 75% auto; }
+  ion-icon[class*="custom-do-comment"] {
+    mask-image: url("../assets/imgs/yorum-yap.svg");
+    mask-size: 75% auto; }
+  
+  /*
+  custom deneme son
+   */
+  .circle-img {
+    border-radius: 100%; }
+  
+  /*
+  marwan-standard
+   */
+  ion-img.img-loaded.full-img {
+    background: transparent; }
+  
+  ion-img.img-loaded.full-img img {
+    width: 100%;
+    height: 100%; }
+  
+  /*# sourceMappingURL=app.css.map */
+/**************************************************************************/
+
+/*********************-app.scss-**************************************************************/
+$icon-color: #999ebe;
+
+.content {
+
+  height: 100vh;
+  background:#f4f4f4;
+}
+
+.toolbar-background-ios {
+  background: #ffcc30;
+}
+
+.white {
+  color: white;
+}
+
+.toolbar-title-ios, .content-ios {
+  color: white;
+}
+
+header {
+  .grid {
+    padding: 0;
+  }
+}
+
+.header-ios .toolbar-background-ios, .footer-ios .toolbar-background-ios {
+  border-style: none;
+  border-color: none;
+}
+
+.toolbar .searchbar-ios .searchbar-input {
+  background: white;
+  border-radius: 15px;
+  margin-top: 7px;
+}
+
+.searchbar-ios .searchbar-search-icon {
+  top: 16px;
+}
+
+.ion-ios-notifications, ion-icon {
+
+  /*color: rgba(157, 104, 15, 0.48);*/
+  font-size: 29px;
+
+  .bell-notification
+  {
+    background:#caa32d !important;
+    color:#caa32d !important;
+  }
+}
+
+.relative {
+  position: relative;
+  display: flex;
+  margin: 1em;
+}
+
+.border {
+  height: 1px;
+  // background: #d6d6d6;
+}
+
+.share-options ion-col {
+
+  margin-top: 5px;
+  border-right: 1px solid #e4e4e4;
+  background: #f6f7f9;
+  border-radius: 22px;
+  /*color: color($colors, dark-purple);*/
+
+
+  ion-icon{
+
+    color:#999ebe;
+  }
+
+  span{
+
+    position: relative;
+    top: -5px;
+    color:#999ebe;
+  }
+}
+
+.card-ios + ion-card, .card-ios {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+
+.card-ios {
+  background-color: #ffffff;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+ion-navbar.toolbar {
+
+  height: 3vh;
+}
+
+.header-photo {
+ /* width: 33px;
+  height: 33px;
+  border-radius: 10%;
+  border: 1px solid #ffffff;
+  float: right;
+  margin: 5px;
+  margin-top: -44px;
+  margin-right: 5px;*/
+  height: 40px;
+  width:40px !important;
+  object-fit: cover;
+  padding: 3px;
+  border-radius: 5px;
+
+}
+
+.muzcount {
+  line-height: 50px;
+  margin-left: 10px;
+}
+
+.gray-background, .gray-background .item-ios {
+  background-color: #eae9e8;
+
+}
+
+.item-ios.item-block .item-inner {
+  border-bottom: none;
+}
+
+.item-ios ion-avatar ion-img, .item-ios ion-avatar img {
+  border-radius: 5px;
+  overflow: hidden;
+  width: 42px;
+  height: 42px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold !important;
+  color: #4c4f61;
+}
+
+.item-ios p {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.23;
+  color: #999ebe;
+}
+
+/* Moods */
+.happy-mode {
+  background-image: url("../assets/mood/happy.png");
+  width: 35px;
+  height: 35px;
+}
+
+.card-header-ios + .card-content-ios, .card-ios .item + .card-content-ios {
+  padding-top: 16px;
+}
+
+.post-action {
+  border-top: 1px solid #f1f1f1;
+  button {
+    color: #999ebe;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+  }
+  ion-icon {
+    color: #999ebe;
+    margin: 0 0 0 5px;
+  }
+  span {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    vertical-align:0px;
+  }
+}
+
+.task {
+  .card {
+    height: 250px;
+  }
+  img {
+    max-height: 125px;
+    object-fit: cover;
+  }
+  .card-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    line-height: 1.44;
+    text-align: left;
+    color: #4c4f61;
+    border-bottom: 1px solid #e4e4e4;
+  }
+  .win {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    line-height: 2.18;
+    text-align: center;
+    color: #eeb612;
+    border-bottom: 1px solid #e4e4e4;
+  }
+  .date {
+    color: #999ebe;
+    font-size: 10px;
+  }
+}
+
+/***/
+ion-icon {
+  &[class*="appname-"] {
+    // Instead of using the font-based icons
+    // We're applying SVG masks
+    background-size: contain;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background: currentColor;
+    width: .5em;
+    height: .5em;
+
+  }
+  // custom icons
+  &[class*="etkinlikler"] {
+    background: url(../assets/imgs/sonetkinlikler.svg);
+
+  }
+  &[class*="sayfalar"] {
+    background: url(../assets/imgs/sonsayfalar.svg);
+  }
+
+  &[class*="dukkan"] {
+    background: url(../assets/imgs/sondukkan.svg);
+  }
+
+  &[class*="gorevler"] {
+    background: url(../assets/imgs/songorevler.svg);
+  }
+
+  &[class*="anasayfa"] {
+    background: url(../assets/imgs/sontimeline.svg);
+
+  }
+
+  &[class*="anasayfa-active"] {
+    background: url(../assets/imgs/sontimeline-active.svg);
+
+  }
+
+  &[class*="muzmodo"] {
+
+    background: url(../assets/imgs/sonmuzmodo.svg);
+
+  }
+
+  &[class*="muzmodo-active"] {
+
+    background: url(../assets/imgs/sonmuzmodo-active.svg);
+
+  }
+
+  &[class*="etkinlikler-active"] {
+    background: url(../assets/imgs/sonetkinlikler-active.svg);
+
+  }
+
+  &[class*="active-gorevler"] {
+    background: url(../assets/imgs/songorevler-active.svg);
+
+  }
+
+  &[class*="active-sayfalar"] {
+    background: url(../assets/imgs/sonsayfalar-active.svg);
+
+  }
+
+  &[class*="active-dukkan"] {
+    background: url(../assets/imgs/sondukkan-active.svg);
+
+  }
+
+  &[class*="deneme"] {
+
+    background-size: 50% 50%;
+    background-size: cover;
+    float: right;
+    background: url(../assets/imgs/paylas.svg) no-repeat;
+  }
+
+}
+
+/*
+
+custom icons deneme
+ */
+
+ion-icon {
+  &[class*="custom-"] {
+    mask-size: contain;
+    mask-position: 50% 50%;
+    mask-repeat: no-repeat;
+    background: currentColor;
+    width: 1em;
+    height: 1em;
+  }
+
+  &[class*="custom-share-photo"] {
+    background: url(../assets/imgs/foto-paylas.svg) no-repeat;
+    background-size: contain;
+
+    color: #ffffff;
+    opacity: .4;
+
+  }
+
+
+  &[class*="custom-share-location"] {
+    background: url(../assets/imgs/konum-paylas.svg) no-repeat;
+
+    background-size:contain;
+    color: #ffffff;
+    opacity: .4;
+  }
+
+  &[class*="custom-share-anket"] {
+    background: url(../assets/imgs/anket-paylas.svg) no-repeat;
+    background-size: contain;
+    color: #ffffff;
+    opacity: .4;
+
+  }
+
+
+  &[class*="custom-share-product"] {
+    background: url(../assets/imgs/urun-paylas.svg) no-repeat;
+    background-size: contain;
+
+    color: #ffffff;
+    opacity: .4;
+
+  }
+
+  &[class*="custom-share-video"] {
+    mask-image: url(../assets/imgs/video-paylas.svg);
+    -webkit-background-size: contain;
+    background-size: contain;
+    color:$icon-color;
+    opacity: .4;
+  }
+
+
+
+
+  &[class*="custom-qrcode"] {
+    mask-image: url(../assets/qrcode.svg);
+  }
+  &[class*="custom-spades"] {
+    mask-image: url(../assets/spades.svg);
+  }
+
+  &[class*="custom-like"] {
+
+    mask-image: url("../assets/imgs/begen.svg");
+    mask-size: 75% auto;
+
+  }
+
+  &[class*="custom-like-active"] {
+
+    mask-image: url("../assets/imgs/begen-active.svg");
+    mask-size: 75% auto;
+    background: #EE3840;
+
+
+  }
+
+  &[class*="custom-share-comment"] {
+
+    mask-image: url("../assets/imgs/paylas.svg");
+    mask-size: 75% auto;
+
+  }
+
+  &[class*="custom-do-comment"] {
+
+    mask-image: url("../assets/imgs/yorum-yap.svg");
+    mask-size: 75% auto;
+
+  }
+
+}
+
+/*
+custom deneme son
+ */
+
+.circle-img{
+
+  border-radius: 100%;
+}
+
+/*
+marwan-standard
+ */
+ion-img.img-loaded.full-img{
+  background: transparent;
+}
+ion-img.img-loaded.full-img img{
+  width: 100%;
+  height: 100%;
+}
+.main-box{
+  background-color: #ffffff;
+  margin-top: 15px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.title-box{
+  padding: 10px!important;
+  font-size: 18px;
+  text-align: left!important;
+  font-weight: 700;
+  border-bottom: 1px solid #eee;
+}
+.content-box{
+  padding: 10px!important;
+  text-align: left!important;
+}
+.list-box{
+  border-bottom: 1px solid #eee;
+}
+.list-img{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-right: 5px;
+}
+.list-name{
+  vertical-align: middle;
+  font-weight: 600;
+  width: 49%;
+  overflow: hidden;
+  display: inline-block;
+  height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.list-btn{
+  border-radius: 5em;
+  display: inline-block;
+  float: right;
+  position: relative;
+  padding: 10px 25px;
+  border: 1px solid #4c4f61;
+  font-size: 12px;
+  font-weight: 700;
+}
+.magic-btn{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background:transparent;
+}
+
+
+
+/*
+
+*/
+
+.change-back-box{
+  position:absolute;
+  width:auto;
+  top: 15px;
+  right: 15px;
+  padding: 5px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;border-radius: 5px
+}
+.profile-img-change{
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 4px 0px;
+
+}
+
+.profile-img-box{
+  position: absolute;
+  left: 0;
+  bottom: -50px;
+  padding: 15px 10px 15px 15px !important;
+  z-index: 6;
+}
+.profile-img-box img{
+  border-radius: 5px;
+}
+@media (min-width:600px ) {
+  .profile-img-box{
+    height: 250px;
+  }
+}
+@media (max-width:600px ) {
+  .profile-img-box{
+    height: 200px;
+  }
+}
+@media  (max-width:500px ) {
+  .profile-img-box{
+    height: 170px;
+  }
+}
+@media (max-width:400px ) {
+  .profile-img-box{
+    height: 150px;
+  }
+}
+@media (max-width:450px ) {
+  .profile-img-box{
+    height: 120px;
+  }
+}
+.notif-message{
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 5em;
+  background: #ffcc30;
+  color: #fff;
+  right: -7px;
+  top: -7px;
+  font-size: 11px;
+  font-weight: 700;
+}
+ion-col{
+  color: #4c4f61;
+}
+.profile-icon{
+  width: 74px;
+  height: 68px;
+  display: inline-block;
+  zoom: 0.3;
+  position: relative;
+
+}
+.change-back-icon{
+  background: url(../assets/imgs/profil.png) -21px -15px;
+}
+.message-icon{
+  background: url(../assets/imgs/profil.png) -21px -150px;
+}
+.follow-icon{
+  background: url(../assets/imgs/profil.png) -21px -225px;
+}
+.leave-icon{
+  background: url(../assets/imgs/profil.png) -21px -300px;
+}
+.desc-icon{
+  background: url(../assets/imgs/profil.png) -21px -375px;
+}
+.location-icon{
+  background: url(../assets/imgs/profil.png) -21px -450px;
+}
+.birth-icon{
+  background: url(../assets/imgs/profil.png) -21px -525px;
+}
+.relation-icon{
+  background: url(../assets/imgs/profil.png) -21px -608px;
+}
+.sex-icon{
+  background: url(../assets/imgs/profil.png) -21px -690px;
+}
+.work-icon{
+  background: url(../assets/imgs/profil.png) -21px -770px;
+}
+.school-icon{
+  background: url(../assets/imgs/profil.png) -21px -850px;
+}
+.slide-box{
+  height:88px;
+  display: inline-block;
+  margin-right: 20px;
+}
+.profile-back img{
+  border-radius: 0;
+}
+/***************************************************************************************/

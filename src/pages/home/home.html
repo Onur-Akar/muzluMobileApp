@@ -1,0 +1,324 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-grid no-padding>
+      <ion-row no-padding>
+        <ion-col col-auto align-items-center="" justify-content-center="" col-1 no-padding no-margin="">
+          <button ion-button icon-only (click)="openNotifyModal()">
+            <ion-icon style="color:#caa32d !important;" class="bell-notification" name="notifications" no-padding></ion-icon>
+            <div class="home-notification" *ngIf="notifyCount > 0">{{notifyCount}}</div>
+          </button>
+        </ion-col>
+        <ion-col col-6 no-padding no-margin="">
+          <ion-searchbar class="home-searchbar-inputtext" (ionInput)="getItems($event)"></ion-searchbar>
+        </ion-col>
+        <ion-col text-center="" col-5 no-margin="" no-padding align-items-center="" justify-content-center="">
+          <ion-row no-margin="" no-padding="">
+            <ion-col text-left="" align-items-center="" style="color:white" item-start="">{{userMuz}} muz</ion-col>
+            <ion-col>
+              <button class="none-backgrrounColor" icon-only (click)="presentUserOptions($event)">
+                <img class="icon-arrow-home-page circle-img" src="../../assets/imgs/header-icons-03.svg" alt="">
+              </button>
+            </ion-col>
+            <ion-col>
+              <ion-avatar item-end="" no-margin="">
+                <img class="img-responsive header-photo" src="https://cdn.muzlu.com/{{userPhoto}}" (click)="goProfilePage()">
+              </ion-avatar>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content id="home">
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Yenile..." refreshingSpinner="circles" refreshingText="Yenileniyor...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-content no-padding>
+
+    <ion-grid no-padding="">
+
+      <ion-row class="bg-gray gap-1em">
+
+        <ion-col col-6>
+          <ion-item class="bg-gray">
+            <ion-label style="color:#4c4f61;">Sırala</ion-label>
+            <ion-select align-items-center vertical-align-top="" col-8 class="bg-white selectbox" [(ngModel)]="gender" placeholder="Popüler">
+              <ion-option value="0">Popüler</ion-option>
+              <ion-option value="1">En beğenilen</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+
+        <ion-col col-6>
+
+          <ion-row text-end="" no-margin="">
+
+            <ion-col col-6></ion-col>
+
+            <ion-col col-2></ion-col>
+            <ion-col col-2>
+              <ion-icon style="color:#9f9e9d;" ios="ios-apps" md="md-apps"></ion-icon>
+              <!--<img class="header-icons" src="../../assets/imgs/header-icons-04.svg" alt="">-->
+            </ion-col>
+
+            <ion-col col-2 text-right="">
+              <div style="height: 25px;top: 2px;position: relative;width: 22px;background: #484848;"></div>
+              <!-- <ion-icon style="color: #484848;position: relative;right:6px;" name="ios-albums"></ion-icon>-->
+              <!--<img class="header-icons" src="../../assets/imgs/header-icons-05.svg" alt="">-->
+            </ion-col>
+
+          </ion-row>
+
+        </ion-col>
+
+      </ion-row>
+
+      <ion-card>
+        <ion-card-header no-padding="">
+          <ion-row no-padding="" no-margin="">
+            <ion-list style="flex:1;">
+              <ion-item>
+                <ion-textarea style="padding: 2%" no-margin="" class="submitShareTextarea " ng-readonly="true" placeholder="Mutluluğunu paylaş"
+                  [(ngModel)]="userPost" (focus)="openPostModal('text')"></ion-textarea>
+              </ion-item>
+            </ion-list>
+          </ion-row>
+          <ion-row class="share-options" no-margin="" no-padding="" align-items-center="" style="padding-bottom: 5px">
+            <ion-col (click)="openPostModal('photo')" align-items-center="" justify-content-center="">
+              <ion-icon name="ios-camera-outline" md="md-camera"></ion-icon>
+              <span>Photo</span>
+            </ion-col>
+            <ion-col (click)="openPostModal('survey')" align-items-center="" justify-content-center="">
+              <ion-icon name="list"></ion-icon>
+              <span>Anket</span>
+            </ion-col>
+            <ion-col (click)="openMorePostOptModal()" align-items-center="" justify-content-center="">
+              <ion-icon ios="ios-more"></ion-icon>
+              <span>Fazlası</span>
+
+            </ion-col>
+
+          </ion-row>
+        </ion-card-header>
+
+      </ion-card>
+
+    </ion-grid>
+
+    <!--reklam-->
+
+    <ion-card style="display: none">
+      <ion-card-header>
+        <ion-row>
+          <ion-col col-1>Muz Hedefim</ion-col>
+          <ion-col col-11 text-right="">
+            <ion-icon (click)="openSheetControllerForMuzHedefimarrowIcon()" style="padding:5px;color: #bababa;box-shadow:0px 0px 2px #888888"
+              name="arrow-up"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-card-header>
+
+      <ion-row>
+        <ion-col>
+          <img src="https://www.bmw.com.tr/content/dam/bmw/common/all-models/1-series/5-door/2017/imagesvideos/BMW-1series-5door-imagesandvideos-890x501-01.jpg/_jcr_content/renditions/cq5dam.resized.img.890.medium.time1511562919771.jpg"
+            alt="">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12 text-left="">
+          <h3 style="color:#999ebe"> 82%</h3>
+          <div col-12="" no-padding="" no-margin="" class="progressbar-background">
+            <div class="progressbar-foreground"></div>
+          </div>
+        </ion-col>
+
+        <ion-col></ion-col>
+      </ion-row>
+
+    </ion-card>
+    <!--reklam-->
+
+    <!-- slider -->
+    <ion-row>
+      <ion-col style="color: #9e9e9e;" class="bg-white">Öneriler</ion-col>
+      <ion-slides style="background: #ffffff;    box-shadow: 0 0 2px #9999;" no-padding="" id="homeIonSlides">
+        <ion-slide justify-content-center="" align-items-center="">
+          <ion-row>
+            <ion-col style="background: url(http://www.milatgazetesi.com/images/album/hz-isa-nin-boyle-gorundugu-dusunuluyordu-asil-goruntu-herkesi-sasirtti-122624s-1.jpg);background-size: cover;    border: 12px solid white;"></ion-col>
+            <ion-col>
+              <h6>Yehova şahitleri</h6>
+              <button ion-button="">Takip et</button>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+        <ion-slide justify-content-center="" align-items-center="">
+          <ion-row>
+            <ion-col style="background: url(https://foto.haberler.com/galeri/2017/12/19/sosyal-medya-ikiye-ayrildi-fotograf-mi-resim-mi-710716_4703_6_b.jpg);background-size: cover;    border: 12px solid white;">
+
+            </ion-col>
+            <ion-col>
+              <h6>Fatoş Cömert</h6>
+              <button ion-button="">Takip et</button>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+        <ion-slide justify-content-center="" align-items-center="">
+          <ion-row>
+            <ion-col style="background: url(https://i1.imgiz.com/rshots/9691/recep-ivedik-5-2017-fragman_9691312-2670_640x360.jpg);background-size: cover; border: 12px solid white;">
+
+            </ion-col>
+            <ion-col>
+              <h6>Ahmet Yakar</h6>
+              <button ion-button="">Takip et</button>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+        <ion-slide justify-content-center="" align-items-center>
+          <ion-row>
+            <ion-col style="background: url(http://televizyongazetesi.com/wp-content/uploads/2017/02/hulya-avsar-dan-surpriz-proje-8505216.jpeg);background-size: cover;    border: 12px solid white;">
+            </ion-col>
+            <ion-col>
+              <h6>Hülya Avşar</h6>
+              <button ion-button="">Takip et</button>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+      </ion-slides>
+    </ion-row>
+
+    <!-- slider son -->
+
+    <ion-card margin-top="" no-padding *ngFor="let quote of quotes let i = index">
+
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="https://cdn.muzlu.com/{{quote.user.details.profile_photo.photo_path}}">
+        </ion-avatar>
+        <ion-avatar item-end="" (click)="openModalMuzMoji()">
+          <img src="../../assets/imgs/muzmoji-mod-paylas-boyut-06-21.svg" alt="">
+        </ion-avatar>
+        <h3 style="color:#4c4f61" *ngIf="quote.parent == null">{{quote.user.name}} {{quote.user.surname}}</h3>
+        <h3 style="color:#4c4f61" *ngIf="quote.parent != null">{{quote.parent.user.name}} {{quote.parent.user.surname}}
+          <br> aracılığı ile {{quote.user.name}} {{quote.user.surname}} paylaştı</h3>
+        <p>{{quote.created_at}}</p>
+        <!--<span class="mood {{quote.thismood.classes}}"></span>-->
+      </ion-item>
+
+
+      <ion-card-content padding-top>
+        <!--<p>{{quote.text || json}}</p>-->
+        <div style="color: #4c4f61;" padding-bottom [innerHTML]="quote.text"></div>
+        <img src="https://cdn.muzlu.com/{{quote.photo}}" alt="" class="img-responsive">
+
+        <ion-row>
+          <ion-col text-left="">
+            <span class="yellow-color-text" *ngIf="quote.count.like>0">
+              <span *ngIf="quote.like_me">sen ve </span>{{quote.like_me ? quote.count.like -1 : quote.count.like}} kişi beğendi</span>
+          </ion-col>
+          <ion-col text-right="">
+            <span class="yellow-color-text" *ngIf="quote.count.comment>0">{{quote.count.comment}} kişi yorum yaptı</span>
+          </ion-col>
+        </ion-row>
+        <ion-row no-padding="" class="post-action">
+          <ion-col col-4 style="color: #999ebe;">
+
+            <ion-row justify-content-center="" align-items-center="">
+
+              <ion-col text-right="" col-3>
+                <div text-left="">{{quote.count.like}}</div>
+              </ion-col>
+              <ion-col text-center="" col-3>
+                <ion-icon (click)="likePost(quote._id, i)" justify-content-center="" align-items-center="" class="custom-icon-placement {{quote.like_me != null ? 'custom-like-active' : 'custom-like'}}"
+                  name="ios-heart-outline"></ion-icon>
+              </ion-col>
+              <ion-col text-left="" col-6>
+                <a href='javascript:;' (click)="likePost(quote._id, i)">
+                  <span class="bold-text like-share-comment-text-color post-span">Beğen</span>
+                </a>
+              </ion-col>
+
+
+            </ion-row>
+
+          </ion-col>
+          <ion-col col-4 style="color: #999ebe;">
+            <ion-row no-padding="" justify-content-center="" align-items-center="">
+              <ion-col text-right="" col-3 clear>{{quote.count.comment}}</ion-col>
+
+              <ion-col col-3>
+                <ion-icon (click)="openCommentModal(quote._id, i)" style="margin: 2px" class="custom-do-comment custom-icon-placement" name="ios-chatbubbles-outline"></ion-icon>
+              </ion-col>
+              <ion-col text-left="" col-6>
+                <a href='javascript:;' (click)="openCommentModal(quote._id, i)">
+                  <span class="bold-text like-share-comment-text-color  post-span">Yorum</span>
+                </a>
+              </ion-col>
+
+            </ion-row>
+          </ion-col>
+          <ion-col col-4 style="color: #999EBE;">
+
+            <ion-row no-padding="" justify-content-center="" align-items-center="">
+              <ion-col col-3 text-right="" style="position: relative; top: 2px;">{{quote.count.share}}</ion-col>
+              <ion-col col-3 text-center="">
+                <ion-icon (click)="openShareModal(quote._id, i)" class="custom-share-comment custom-icon-placement" name="ios-share-alt"></ion-icon>
+              </ion-col>
+              <ion-col col-6>
+                <a href="javascript:;" (click)="openShareModal(quote._id, i)">
+                  <span text-left="" class="bold-text like-share-comment-text-color post-span">Paylaş</span>
+                </a>
+              </ion-col>
+
+            </ion-row>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+
+          <!--daha fazla yorum-->
+          <ion-row no-padding="">
+            <ion-col col-2 no-padding="">
+              <ion-avatar item-start no-padding no-margin>
+                <img style="max-height: 45px;width:85%;object-fit: cover" class="img-responsive" src="https://cdn.muzlu.com/{{userPhoto}}">
+              </ion-avatar>
+            </ion-col>
+            <ion-col col-10 no-padding="">
+              <ion-textarea col-12 [(ngModel)]="userFastComment[i]" (keyup.enter)="sendPostComment(quote._id, i)" placeholder="yorum yazınız ..."
+                style="border:1px solid #e4e4e4;color:#999ebe;border-radius:5px;height: 46px;"></ion-textarea>
+            </ion-col>
+          </ion-row>
+
+          <ion-row margin-top="" *ngFor="let fstComment of quote.fast_comment">
+            <ion-col col-2>
+              <ion-avatar item-start>
+                <img style="max-height: 45px;width:85%" class="img-responsive" src="https://cdn.muzlu.com/{{fstComment.user.details.profile_photo.photo_path}}"
+                  alt="">
+              </ion-avatar>
+            </ion-col>
+            <ion-col padding="" col-10 style="text-align: justify;color:#4c4f61;background: #f1f1f1;border-radius: 15px;" class="text-ellipsis">
+              {{fstComment.comment}}
+            </ion-col>
+          </ion-row>
+          <!--daha fazla yorum-->
+
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+
+    <button ion-button round (click)="openFilterModal()" style="position: fixed; bottom: 51px; right: 0; color:#ffffff;">Filtrele</button>
+
+    <ion-card *ngIf="noMorePost">
+      <ion-card-content>
+        <ion-item>
+          Daha fazla paylaşım yok...
+        </ion-item>>
+      </ion-card-content>
+    </ion-card>
+    <ion-infinite-scroll (ionInfinite)="loadMoreFeed($event)">
+      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Yükleniyor..."></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+  </ion-content>

@@ -1,0 +1,114 @@
+<!--
+  Generated template for the ProfileSettingsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons end>
+      <button ion-button (click)="dismiss()" color="white">İptal</button>
+    </ion-buttons>
+    <ion-title>profileSettings</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content no-padding>
+  <ion-grid no-padding>
+    <ion-row class="main-box">
+      <ion-col col-12 class="title-box">
+        Profil Ayarları
+      </ion-col>
+      <form action="">
+        <ion-col col-12 class="content-box">
+          <ion-item class="setting-input-box">
+            <ion-label style="opacity: .5;">Hakkımda:</ion-label>
+            <ion-input type="text" placeholder="Hakkımda"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-12 class="content-box">
+          <ion-item class="setting-input-box">
+            <ion-label style="opacity: .5;">Yaşadığın şehir:</ion-label>
+            <ion-input type="password" placeholder="istanbul"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-12 class="content-box">
+          <ion-item class="setting-input-box" no-border="">
+            <ion-label style="opacity: .5;">Doğum Tarihi:</ion-label>
+            <ion-input type="date"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-12 class="content-box">
+          <ion-item class="setting-input-box">
+            <ion-label style="opacity: .5;">İlişki Durumu</ion-label>
+            <ion-select multiple="false">
+              <ion-option>Var</ion-option>
+              <ion-option>Yok</ion-option>
+              <ion-option>Belirtmek istemiyorum</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col col-12 class="content-box">
+          <ion-item class="setting-input-box">
+            <ion-label style="opacity: .5;"> Cinsyiet</ion-label>
+            <ion-select multiple="false">
+              <ion-option>Erkek</ion-option>
+              <ion-option>Kadın</ion-option>
+              <ion-option>Belirtmek istemiyorum</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+        <ion-col col-12 class="content-box">
+          <ion-item class="setting-input-box">
+            <ion-label style="opacity: .5;">İş</ion-label>
+            <ion-select multiple="false" [(ngModel)]="workSelectedValue" name="job">
+              <ion-option value="0">Çalışıyorum</ion-option>
+              <ion-option value="1">Çalışmıyorum</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item class="setting-input-box" *ngIf="workSelectedValue && workSelectedValue!= 1">
+            <ion-input placeholder="Çalıştığnız Şirket" name="company"></ion-input>
+          </ion-item>
+          <ion-item class="setting-input-box" *ngIf="workSelectedValue && workSelectedValue != 1">
+            <ion-input placeholder="Çalıştığnız Pozisyon"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-12 class="content-box">
+          <ion-item class="setting-input-box">
+            <ion-label style="opacity: .5;">Eğitim</ion-label>
+            <ion-select multiple="false" [(ngModel)]="educationSelectedValue" name="education">
+              <ion-option value="1">İlkokul</ion-option>
+              <ion-option value="2">Ortaokul</ion-option>
+              <ion-option value="3">Lise</ion-option>
+              <ion-option value="4">Üniversite</ion-option>
+              <ion-option value="5">Yüksek Lisans</ion-option>
+              <ion-option value="6">Yüksek Lisans</ion-option>
+              <ion-option value="0">Belirtmek İstemiyorum</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item class="setting-input-box" *ngIf="educationSelectedValue && educationSelectedValue !=0">
+            <ion-label style="opacity: .5;">Durum</ion-label>
+            <ion-select multiple="false" [(ngModel)]="eduStatusSelectedValue" name="educationstatus">
+              <ion-option value="1">Mezun</ion-option>
+              <ion-option value="2">devam ediyor</ion-option>
+            </ion-select>
+          </ion-item>
+          <ion-item class="setting-input-box" *ngIf="eduStatusSelectedValue && educationSelectedValue && educationSelectedValue !=0">
+            <ion-input placeholder="Okul adı"></ion-input>
+          </ion-item>
+          <ion-item class="setting-input-box" *ngIf="eduStatusSelectedValue && educationSelectedValue && educationSelectedValue !=0">
+            <ion-input placeholder="Bölüm"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-12 class="content-box">
+          <button ion-button type="submit" block>Gönder</button>
+        </ion-col>
+      </form>
+
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
